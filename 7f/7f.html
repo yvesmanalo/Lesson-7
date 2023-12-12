@@ -8,19 +8,6 @@
 <body>
   <script>
 
-    
-    function convertTemperature(degrees,unit){
-
-      if (unit === 'C'){
-        let fahrenheit = degrees;
-        convertToCelcius(fahrenheit);
-      } else if (unit === 'F'){
-        let celcius = fahrenheit;
-        convertToFahrenheit(celcius);
-      }
-      convertTemperature(25,'C');
-    }
-
     function convertToCelcius(fahrenheit){
       const Celcius = (fahrenheit - 32) *5/9;
       return console.log(Celcius);
@@ -30,6 +17,19 @@
       const Fahrenheit = (celcius * 9/5) + 32;
       return console.log(Fahrenheit);
     }
+    
+    function convertTemperature(degrees,unit){
+
+      if (unit === 'C'){
+        convertToFahrenheit(degrees);
+      } else if (unit === 'F'){
+        convertToCelcius(degrees);
+      }
+      
+    }
+    convertTemperature(25,'C');
+
+    
 
   </script>
 </body>
